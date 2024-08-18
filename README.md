@@ -20,7 +20,7 @@ This can be accomplished in a couple different ways. You could do it using Git b
 
 Or you can do it manually through a text editor of your choice by changing the lines required where a "-" indicates the original line and a "+" indicates the change necessary. Where to find the specific lines can be found after the @@ before each change, where it states the line number. There are a total of seven lines to change and one line to add.
 
-### 2) Replace the DBC files in your AzerothCore Data directory with the ones provided in [DBFilesClient](https://github.com/benjymansy123/mod-worgoblin/tree/master/patch-contents/DBFilesClient).
+### 2) Replace the DBC files in your AzerothCore Data directory with the ones provided in [DBFilesClient](https://github.com/heyitsbench/mod-worgoblin/tree/master/data/patch/DBFilesClient).
 
 Upon downloading the repo, you'll have the patch-contents file available to you. Copy all the contents of the DBFilesClient folder to your AzerothCore Data directory. Feel free to make a backup of the DBCs you'll be replacing, as backups never hurt.
 
@@ -30,14 +30,7 @@ If you have added existing custom content (Spells, Items, SkillLines..etc) to an
 
 ### 3) Compile and install AzerothCore.
 
-### 4) **Non-HD** : Move the [patch-contents](https://github.com/benjymansy123/mod-worgoblin/tree/master/patch-contents) folder to your Data folder in your WoW client and rename the folder to `patch-A.MPQ`.
-
-> [!IMPORTANT]
-> If you are running a patched HD Client support use the following instructions instead or you will have game crashes.
-
-1. Install the client file [patch-K.MPQ](https://github.com/araxiaonline/wow-client-patches/) in to your WoW Client folder C:/(path to World of Warcraft)/Data/
-2. Copy the files in patch-hd/DBFilesClient onto your server DBC location similar to NonHD version.
-3. The character creation pages also are updated with a more modern look to incorporate the 2 new races.
+### 4) Move the [patch](https://github.com/heyitsbench/mod-worgoblin/tree/master/data/patch) folder to your Data folder in your WoW client and rename the folder to `patch-A.MPQ`.
 
 ### 5) Remove signature checks from your WoW executable.
 I recommend Windows users to use [this patcher](https://model-changing.net/index.php?app=downloads&module=downloads&controller=view&id=314&tab=details) created by kebabstorm to patch your Wow.exe file. I recommend macOS users to download this [pre-patched .app file](https://github.com/benjymansy123/custom-race-ac-12_6_21/releases/download/sig-check/WoW.app.zip), since no easy patcher exists for macOS.
