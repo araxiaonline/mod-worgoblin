@@ -3,7 +3,6 @@ on:
     push:
         branches:
             - 'araxia-main'
-            - 'master'
     pull_request:
         branches:
             - 'araxia-main'
@@ -22,4 +21,5 @@ jobs:
               with:
                 GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
                 tag_release: true
+                event_name: ${{ github.event_name }}
 
