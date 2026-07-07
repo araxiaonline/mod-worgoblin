@@ -10,15 +10,9 @@ This module makes *heavy* use of client patching and modification. Because of th
 
 ## How to Install
 
-As of right now, the hooks for allowing custom races is not present in AzerothCore. Because of this, you'll have to manually apply the change required to your AzerothCore source.
+### 1) Add the `mod-worgoblin` folder to your AzerothCore source's modules directory.
 
-### 1) Apply the [worgoblin.patch](https://github.com/benjymansy123/mod-worgoblin/blob/master/worgoblin.patch) to your AzerothCore source directory.
-
-This can be accomplished in a couple different ways. You could do it using Git by using the following command:
-
-`git apply --ignore-space-change --ignore-whitespace modules/mod-worgoblin/worgoblin.patch`
-
-Or you can do it manually through a text editor of your choice by changing the lines required where a "-" indicates the original line and a "+" indicates the change necessary. Where to find the specific lines can be found after the @@ before each change, where it states the line number. There are a total of seven lines to change and one line to add.
+This can be done by cloning the repository through git or by downloading the module as a ZIP. If you choose the latter, make sure that the folder name of the module is exactly `mod-worgoblin`.
 
 ### 2) Replace the DBC files in your AzerothCore Data directory with the ones provided in [DBFilesClient](https://github.com/heyitsbench/mod-worgoblin/tree/master/data/patch/DBFilesClient).
 
@@ -33,7 +27,7 @@ If you have added existing custom content (Spells, Items, SkillLines..etc) to an
 ### 4) Move the [patch](https://github.com/heyitsbench/mod-worgoblin/tree/master/data/patch) folder to your Data folder in your WoW client and rename the folder to `patch-A.MPQ`.
 
 ### 5) Remove signature checks from your WoW executable.
-I recommend Windows users to use [this patcher](https://model-changing.net/index.php?app=downloads&module=downloads&controller=view&id=314&tab=details) created by kebabstorm to patch your Wow.exe file. I recommend macOS users to download this [pre-patched .app file](https://github.com/benjymansy123/custom-race-ac-12_6_21/releases/download/sig-check/WoW.app.zip), since no easy patcher exists for macOS.
+I recommend Windows users to use [this patcher](https://www.wowmodding.net/files/file/283-wow-335-patcher-custom-item-fix/) created by kebabstorm to patch your Wow.exe file. I recommend macOS users to download this [pre-patched .app file](https://github.com/benjymansy123/custom-race-ac-12_6_21/releases/download/sig-check/WoW.app.zip), since no easy patcher exists for macOS.
 
 Because WoW uses signature checks so as to not allow Interface files to be modified, we need to remove those checks in order to be able to use custom races. This is accomplished using the patcher included in the repo. Move the patcher into your WoW client directory and run it. Again, feel free to make a backup of your original executable.
 
